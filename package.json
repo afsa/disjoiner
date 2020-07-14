@@ -1,0 +1,38 @@
+{
+  "name": "disjoiner",
+  "version": "1.0.0",
+  "description": "Split a set of valued intervals into disjoint intervals.",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "pretest": "npm run build",
+    "test": "node_modules/.bin/mocha \"dist/**/*.spec.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afsa/disjoiner.git"
+  },
+  "keywords": [
+    "interval",
+    "join",
+    "disjoint",
+    "schedule",
+    "occupancy"
+  ],
+  "author": "afsa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afsa/disjoiner/issues"
+  },
+  "homepage": "https://github.com/afsa/disjoiner#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "chai": "^4.2.0",
+    "eslint": "^7.4.0",
+    "mocha": "^8.0.1",
+    "typescript": "^3.9.6"
+  }
+}
