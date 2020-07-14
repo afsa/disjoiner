@@ -2,9 +2,11 @@
   "name": "disjoiner",
   "version": "1.0.0",
   "description": "Split a set of valued intervals into disjoint intervals.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "node_modules/.bin/tsc",
+    "prepack": "node_modules/.bin/tsc -p tsconfig.prod.json",
+    "build": "node_modules/.bin/tsc -p tsconfig.json",
     "pretest": "npm run build",
     "test": "node_modules/.bin/mocha \"dist/**/*.spec.js\""
   },
@@ -25,6 +27,11 @@
     "url": "https://github.com/afsa/disjoiner/issues"
   },
   "homepage": "https://github.com/afsa/disjoiner#readme",
+  "files": [
+    "/dist",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/mocha": "^8.0.0",
