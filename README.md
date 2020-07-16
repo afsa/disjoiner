@@ -16,7 +16,22 @@ Using yarn
 yarn add disjoiner
 ```
 
+Import in typescript using
+
+```typescript
+import { Disjoiner } from 'disjoiner';
+```
+
+Import in node.js using
+
+```javascript
+const Disjoiner = require('disjoiner').Disjoiner;
+```
+
+
 ## Example
+
+Example using typescript
 
 ```typescript
 import { Disjoiner } from 'disjoiner';
