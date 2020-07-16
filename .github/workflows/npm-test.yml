@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,3 +23,17 @@ jobs:
           node-version: ${{ matrix.node_version }}
       - run: npm ci
       - run: npm test
+
+  coverage:
+    runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          node_version: ['12']
+
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: ${{ matrix.node_version }}
+        - run: npm ci
+        - run: npm coverage
