@@ -3,7 +3,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "pretty": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": true,
     "target": "es2019",
     "allowUnreachableCode": false,

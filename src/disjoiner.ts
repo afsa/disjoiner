@@ -63,7 +63,8 @@ export class Disjoiner<K, V> {
 
         const mergedItem = mergedItems.pop() as ValuedInterval<K, V>;
 
-        if (heap.isEmpty() || this.config.compare(mergedItem.end, heap.peak()?.start as K) <= 0) {
+        if (heap.isEmpty()
+          || this.config.compare(mergedItem.end, (heap.peak() as ValuedInterval<K, V>).start as K) <= 0) {
             disjointIntervals.push(mergedItem);
         } else {
           mergedItems.push(mergedItem);

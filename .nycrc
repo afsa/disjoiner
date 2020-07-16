@@ -1,0 +1,9 @@
+{
+  "all": true,
+  "check-coverage": true,
+  "exclude": ["**/*.spec.ts", "**/*.d.ts", "coverage"],
+  "branches": 100,
+  "lines": 100,
+  "functions": 100,
+  "statements": 100
+}

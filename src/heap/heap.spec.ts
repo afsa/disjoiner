@@ -101,4 +101,14 @@ describe('BinaryHeap', () => {
       heapItem.should.equal(heapPeak);
     }
   });
+
+  it('returns null on pop when the heap is empty', () => {
+    const heap = new BinaryHeap<number>((a, b) => a < b ? -1 : 1);
+    (heap.pop() === null).should.be.true;
+  });
+
+  it('returns null on peak when the heap is empty', () => {
+    const heap = new BinaryHeap<number>((a, b) => a < b ? -1 : 1);
+    (heap.peak() === null).should.be.true;
+  });
 });

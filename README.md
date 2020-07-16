@@ -56,7 +56,7 @@ const intervals = [{
 // Run disjoiner
 const disjointIntervals = disjoiner.disjoin(intervals);
 
-// Outputs:
+// Outputs an array with intervals where the value for each time is known
 // [{
 //   start: new Date('2020-01-01'),
 //   end: new Date('2020-03-01'),
@@ -93,7 +93,7 @@ Config for the disjoiner constructor.
 - `mergeValues(val1: V, val2: V): V` Specify how values should be merged when two intervals overlap. The simplest function is to add the values. Note that this function should be associative and commutative to give a well defined output.
 - `equals(val1: V, val2: V): boolean` Checks if two values are equal. This function is used to merge intervals next to each other where the values are the same. To turn off this functionality always return `false`.
 
-### ValiedInterval<K, V>
+### ValuedInterval<K, V>
 
 An interval with a value.
 

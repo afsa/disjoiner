@@ -1,6 +1,14 @@
+# Editors
+.vscode
+.idea
+
 # Dependencies
 node_modules
 
 # Build
 dist
+
+# Coverage
+.nyc_output
+coverage
 

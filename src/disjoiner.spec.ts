@@ -1,8 +1,16 @@
 import 'mocha';
 import 'chai/register-should';
-import { Disjoiner } from './disjoiner';
+import { Disjoiner } from '.';
 
 describe('Disjoiner', () => {
+
+  it('returns an empty array if given an empty array', () => {
+    new Disjoiner<number, number>({
+      compare: (a, b) => a - b,
+      mergeValues: (a, b) => a + b,
+      equals: (a, b) => a === b
+    }).disjoin([]).should.deep.equal([]);
+  });
 
   it('returns an array of disjoint intervals when input ends on the same date', () => {
     const intervals = [{
