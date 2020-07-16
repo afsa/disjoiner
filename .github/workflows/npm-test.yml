@@ -26,9 +26,9 @@ jobs:
 
   coverage:
     runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          node_version: ['12']
+    strategy:
+      matrix:
+        node_version: ['12']
 
       steps:
         - uses: actions/checkout@v2
