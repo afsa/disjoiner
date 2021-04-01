@@ -1,6 +1,6 @@
 {
   "name": "disjoiner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Split a set of valued intervals into disjoint intervals.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
